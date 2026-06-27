@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ subject }} Quiz</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>{{ subject.capitalize() }} Quiz</h1>
+
+    {% if questions %}
+
+        {% for question in questions %}
+
+            <div class="chat-box">
+
+                <h3>Question {{ loop.index }}</h3>
+
+                <p>{{ question.question }}</p>
+
+                <p>
+                    <b>Answer:</b>
+                    {{ question.answer }}
+                </p>
+
+            </div>
+
+            <br>
+
+        {% endfor %}
+
+    {% else %}
+
+        <h3>No quiz available.</h3>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/home">
+        <button>Back to Home</button>
+    </a>
+
+</body>
+
+</html>
