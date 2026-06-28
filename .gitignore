@@ -1,0 +1,6 @@
+__pycache__/
+.vscode/
+secret.py
+study.db
+notes.pdf
+*.pyc
