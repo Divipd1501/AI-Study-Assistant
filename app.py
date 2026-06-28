@@ -9,6 +9,7 @@ app.secret_key = "studyassistant"
 
 # Gemini Client
 client = genai.Client(api_key=API_KEY)
+#print("API KEY:", API_KEY)
 
 # Progress Data
 # Progress Data
