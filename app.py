@@ -2,12 +2,13 @@ from flask import Flask, render_template, request, redirect, session, send_file
 from reportlab.pdfgen import canvas
 import sqlite3
 from google import genai
-from secret import API_KEY
+import os
 
 app = Flask(__name__)
 app.secret_key = "studyassistant"
 
 # Gemini Client
+API_KEY = os.getenv("API_KEY")
 client = genai.Client(api_key=API_KEY)
 #print("API KEY:", API_KEY)
 
